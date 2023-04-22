@@ -1,0 +1,7 @@
+import tabula
+import pandas as pd
+pdf = '/Users/benrobinson/Downloads/Example_pdf_bank_statement.pdf'
+csv = '/Users/benrobinson/Desktop/output_csv_file2.csv'
+dfs = tabula.read_pdf(input_path=pdf, pages="all")
+tabula.convert_into(input_path=pdf, output_path=csv,
+output_format="csv", pages="all", stream=True)
